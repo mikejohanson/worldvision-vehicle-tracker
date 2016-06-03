@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Vehicle Tracker</string>
+    <string name="title_activity_view_entries">Vehicle Entries</string>
+    <string name="title_activity_export">Export Data</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_delete">Delete</string>
+    <string name="rc_6_12">RC (6-12)</string>
+    <string name="comments">Comments</string>
+    <string name="location">Location</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save Entry</string>
+    <string name="date_of_entry">Date of Entry</string>
+    <string name="starting_mileage">Starting Mileage</string>
+    <string name="ending_mileage">Ending Mileage</string>
+    <string name="no_of_passengers">No. of Passengers</string>
+    <string name="purpose_of_visit">Purpose of Visit</string>
+    <string name="mobile_clinic">Mobile Clinic</string>
+    <string name="health">Health</string>
+    <string name="education">Education</string>
+    <string name="child_protection">Child Protection</string>
+    <string name="economic_development">Economic Development</string>
+    <string name="other">Other</string>
+    <string name="please_specify">please specify</string>
+    <string name="sponsorship_monitoring">Sponsorship Monitoring</string>
+    <string name="adp_project_related_visit_activity">ADP Project Related Visit/Activity</string>
+    <string name="stakeholder_meeting">Stakeholder Meeting</string>
+    <string name="passengers_from">Passengers From</string>
+    <string name="presentation">Presentation</string>
+    <string name="adp_everyday_business">ADP Everyday Business</string>
+    <string name="department_of_health">Department of Health</string>
+    <string name="department_of_social_development">Department of Social Development</string>
+    <string name="department_of_education">Department of Education</string>
+    <string name="department_of_agriculture">Department of Agriculture</string>
+    <string name="community_member">Community Member</string>
+    <string name="cbo_ngo">CBO/NGO</string>
+    <string name="adp_staff">ADP Staff</string>
+    <string name="beneficiaries">Beneficiaries</string>
+    <string name="women">WOMEN</string>
+    <string name="boys_0_5">BOYS (0-5)</string>
+    <string name="girls_0_5">GIRLS (0-5)</string>
+    <string name="rc_0_5">RC (0-5)</string>
+    <string name="rc_13_18">RC (13-18)</string>
+    <string name="girls_13_18">GIRLS (13-18)</string>
+    <string name="boys_13_18">BOYS (13-18)</string>
+    <string name="girls_6_12">GIRLS (6-12)</string>
+</resources>

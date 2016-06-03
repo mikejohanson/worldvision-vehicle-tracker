@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:rowCount="40"
+    android:columnCount="2"
+    tools:context="com.worldvision.vehicletracker.NewEntryActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/date_of_entry"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="2" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/datePicker"
+        android:layout_columnSpan="2"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:spinnersShown="true" />
+    <TextView
+        android:layout_column="0"
+        android:layout_row="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/starting_mileage"
+        android:layout_columnWeight="1"
+        android:id="@+id/lblStartMileage"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:layout_column="0"
+        android:layout_row="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/nbrStartMileage"
+        android:nextFocusForward="@+id/nbrEndMileage"
+        android:nextFocusRight="@+id/nbrEndMileage"
+        android:nextFocusDown="@+id/nbrEndMileage"
+         />
+
+
+
+    <TextView
+        android:layout_column="1"
+        android:layout_row="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/ending_mileage"
+        android:layout_gravity="right"
+        android:id="@+id/lblEndMileage"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:layout_column="1"
+        android:layout_row="3"
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/nbrEndMileage"
+       />
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/no_of_passengers"
+        android:layout_gravity="left"
+        android:id="@+id/lblNoOfPassengers"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:layout_column="0"
+        android:layout_row="5"
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/nbrNoOfPassengers"
+        />
+    <TextView
+        android:layout_column="0"
+        android:layout_row="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/purpose_of_visit"
+        android:layout_gravity="left"
+        android:id="@+id/lblVisitPurpose"
+        android:layout_marginTop="20dp"
+        android:layout_columnSpan="2" />
+    <CheckBox
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="7"
+        android:text="@string/mobile_clinic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:id="@+id/chkMobileClinic" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/chkPresentationSubLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_row="9"
+        android:layout_column="0"
+        android:layout_columnSpan="2">
+        <CheckBox
+            android:text="@string/health"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkPresentation_Health" />
+        <CheckBox
+            android:text="@string/education"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkPresentation_Education" />
+        <CheckBox
+            android:text="@string/child_protection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkPresentation_ChildProtection" />
+        <CheckBox
+            android:text="@string/economic_development"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkPresentation_EconomicDevelopment" />
+        <CheckBox
+            android:text="@string/other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkPresentation_Other" />
+        <EditText
+            android:hint="@string/please_specify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtPresentation_Other" />
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sponsorship_monitoring"
+        android:id="@+id/chkSponsorshipMonitoring"
+        android:layout_row="11"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adp_project_related_visit_activity"
+        android:id="@+id/chkADPProjectRelated"
+        android:layout_row="12"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/chkADPProjectRelatedSubLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:visibility="gone"
+        android:layout_columnSpan="2"
+        android:layout_row="13"
+        android:layout_column="0">
+        <CheckBox
+            android:text="@string/health"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkADPProjectRelated_Health" />
+        <CheckBox
+            android:text="@string/education"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkADPProjectRelated_Education" />
+        <CheckBox
+            android:text="@string/child_protection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkADPProjectRelated_ChildProtection" />
+        <CheckBox
+            android:text="@string/economic_development"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkADPProjectRelated_EconomicDevelopment" />
+        <CheckBox
+            android:text="@string/other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkADPProjectRelated_Other" />
+        <EditText
+            android:hint="@string/please_specify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtProjectRelated_Other" />
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stakeholder_meeting"
+        android:id="@+id/chkStakeholder"
+        android:layout_row="14"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:visibility="gone"
+        android:id="@+id/chkStakeholderSubLayout"
+        android:layout_columnSpan="2"
+        android:layout_row="15"
+        android:layout_column="0">
+        <CheckBox
+            android:text="@string/health"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkStakeholder_Health" />
+        <CheckBox
+            android:text="@string/education"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkStakeholder_Education" />
+        <CheckBox
+            android:text="@string/child_protection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkStakeholder_ChildProtection" />
+        <CheckBox
+            android:text="@string/economic_development"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkStakeholder_EconomicDevelopment" />
+        <CheckBox
+            android:text="@string/other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/chkStakeholder_Other" />
+        <EditText
+            android:hint="@string/please_specify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtStakeholder_Other" />
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other (Please Specify)"
+        android:id="@+id/chkPurpose_Other"
+        android:layout_row="16"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/passengers_from"
+        android:id="@+id/lblPassengers"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/presentation"
+        android:id="@+id/chkPresentation"
+        android:layout_row="8"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adp_everyday_business"
+        android:id="@+id/chkADPEverydayBusiness"
+        android:layout_row="10"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtPurpose_Other"
+        android:layout_row="17"
+        android:layout_column="0"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="19"
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkDoH"
+        android:text="@string/department_of_health"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department_of_social_development"
+        android:id="@+id/chkDoSD"
+        android:layout_row="20"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department_of_education"
+        android:id="@+id/chkDoE"
+        android:layout_row="21"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department_of_agriculture"
+        android:id="@+id/chkDoA"
+        android:layout_row="22"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/community_member"
+        android:id="@+id/chkCommunityMember"
+        android:layout_row="25"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbo_ngo"
+        android:id="@+id/chkCBO"
+        android:layout_row="23"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtCBONGO"
+        android:layout_row="24"
+        android:layout_column="0"
+        android:layout_marginLeft="25dp"
+        android:hint="which cbo/ngo?"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adp_staff"
+        android:id="@+id/chkADPStaff"
+        android:layout_row="26"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/other"
+        android:id="@+id/chkPassengersFrom_Other"
+        android:layout_row="27"
+        android:layout_column="0"
+        android:checked="false"
+        android:layout_columnSpan="2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/beneficiaries"
+        android:id="@+id/textView2"
+        android:layout_row="29"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPassengersFrom_Other"
+        android:layout_row="28"
+        android:layout_column="0"
+        android:layout_columnSpan="2" />
+
+    <LinearLayout
+    android:layout_row="30"
+    android:layout_column="0"
+    android:background="#7f000000"
+    android:layout_marginRight="10dp"
+    android:layout_gravity="fill_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="125dp"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@+id/txtWomen"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/txtMen"
+        android:selectAllOnFocus="true"
+        android:textSize="25pt"
+        android:textColor="#ffffff"
+        android:inputType="number"
+        android:text="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_gravity="center_horizontal"
+        android:text="MEN"
+        android:id="@+id/lblMen"
+        android:textColor="#ffffff" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_row="30"
+        android:layout_column="1"
+        android:layout_marginLeft="10dp"
+        android:background="#7f000000"
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="fill_horizontal"
+            android:textAlignment="center"
+            android:text="0"
+            android:nextFocusDown="@+id/txtBoys_05"
+            android:selectAllOnFocus="true"
+            android:id="@+id/txtWomen"
+            android:textSize="25pt"
+            android:textColor="#ffffff"
+            android:inputType="number" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
+
+            android:text="@string/women"
+            android:id="@+id/lblWomen"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_columnSpan="2"
+        android:layout_row="32"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_rowSpan="1"
+        android:layout_column="0">
+        <LinearLayout
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:selectAllOnFocus="true"
+                android:id="@+id/txtBoys_05"
+                android:textSize="25pt"
+                android:nextFocusDown="@+id/txtGirls_05"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/boys_0_5"
+                android:id="@+id/lblBoys_05"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:id="@+id/txtGirls_05"
+                android:nextFocusDown="@+id/txtRC_05"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/girls_0_5"
+                android:id="@+id/lblGirls_05"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:nextFocusDown="@+id/txtBoys_612"
+                android:text="0"
+                android:id="@+id/txtRC_05"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/rc_0_5"
+                android:id="@+id/lblRC_05"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_columnSpan="2"
+        android:layout_row="33"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_rowSpan="1"
+        android:layout_column="0">
+        <LinearLayout
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:id="@+id/txtBoys_612"
+                android:nextFocusDown="@+id/txtGirls_612"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="BOYS (6-12)"
+                android:id="@+id/lblBoys_612"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:id="@+id/txtGirls_612"
+                android:nextFocusDown="@+id/txtRC_612"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/girls_6_12"
+                android:id="@+id/lblGirls_612"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:nextFocusDown="@+id/txtBoys_1318"
+                android:id="@+id/txtRC_612"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/rc_6_12"
+                android:id="@+id/lblRC_612"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_columnSpan="2"
+        android:layout_row="34"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_rowSpan="1"
+        android:layout_column="0">
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:id="@+id/txtBoys_1318"
+                android:nextFocusDown="@+id/txtGirls_1318"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/boys_13_18"
+                android:id="@+id/lblBoys_1318"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:selectAllOnFocus="true"
+                android:id="@+id/txtGirls_1318"
+                android:nextFocusDown="@+id/txtRC_1318"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/girls_13_18"
+                android:id="@+id/lblGirls_1318"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#7f000000"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:selectAllOnFocus="true"
+                android:id="@+id/txtRC_1318"
+                android:textSize="25pt"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/rc_13_18"
+                android:id="@+id/lblRC_1318"
+                android:textColor="#ffffff"
+                android:textSize="7pt" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/comments"
+        android:id="@+id/lblComments"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="36"
+        android:layout_gravity="fill_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/txtComments"
+        />
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/location"
+        android:id="@+id/lblLocation"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="234.5,180.2"
+        android:id="@+id/lblLatLong"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:id="@+id/btnCancel"
+        android:layout_row="39"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="fill_horizontal"
+        android:layout_column="0"
+        android:onClick="onBtnCancelClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/btnSave"
+        android:layout_row="39"
+        android:layout_column="1"
+        android:onClick="onBtnSaveClick" />
+</GridLayout>
+</ScrollView>
