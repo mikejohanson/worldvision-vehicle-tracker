@@ -45,9 +45,7 @@ public class NewEntryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_entry);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        getLocation();
-        final TextView lblLatLong = (TextView) findViewById(R.id.lblLatLong);
-        lblLatLong.setText(latitude + ", " + longitude);
+
         Intent theIntent = this.getIntent();
         CheckBox chkPresentation = ( CheckBox ) findViewById( R.id.chkPresentation );
         chkPresentation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
@@ -99,6 +97,7 @@ public class NewEntryActivity extends AppCompatActivity {
         });
         if(theIntent.hasExtra(EXTRA_VEHICLE_ENTRY)) {
             ve = theIntent.getExtras().getParcelable(EXTRA_VEHICLE_ENTRY);
+
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
             try {
                 Date date = format.parse(ve.dateOfEntry);
@@ -165,11 +164,17 @@ public class NewEntryActivity extends AppCompatActivity {
             ((EditText) findViewById(R.id.txtStakeholder_Other)).setText(ve.txtStakeholder_Other);
             ((EditText) findViewById(R.id.txtPassengersFrom_Other)).setText(ve.txtPassengersFrom_Other);
             ((EditText) findViewById(R.id.txtPurpose_Other)).setText(ve.txtPurpose_Other);
-
+            ((EditText) findViewById(R.id.txtWard)).setText(ve.ward);
+            ((EditText) findViewById(R.id.txtVillage)).setText(ve.village);
+            ((TextView) findViewById(R.id.lblLatLong)).setText(ve.latitude + ", " + ve.longitude);
 
         }
         else{
             ve = new VehicleEntry();
+            getLocation();
+            final TextView lblLatLong = (TextView) findViewById(R.id.lblLatLong);
+            lblLatLong.setText(latitude + ", " + longitude);
+
         }
     }
 
@@ -268,7 +273,10 @@ public class NewEntryActivity extends AppCompatActivity {
             ve.txtCBONGO = ((EditText) findViewById(R.id.txtCBONGO)).getText().toString();
             ve.txtPassengersFrom_Other = ((EditText) findViewById(R.id.txtPassengersFrom_Other)).getText().toString();
             ve.txtPurpose_Other = ((EditText) findViewById(R.id.txtPurpose_Other)).getText().toString();
-
+            ve.ward = ((EditText) findViewById(R.id.txtWard)).getText().toString();
+            ve.village = ((EditText) findViewById(R.id.txtVillage)).getText().toString();
+            ve.latitude = latitude;
+            ve.longitude = longitude;
             ArrayList<VehicleEntry> data = Paper.book().read("entries");
             if (data == null) {
                 data = new ArrayList<VehicleEntry>();

@@ -34,7 +34,9 @@ public class ExportActivity extends AppCompatActivity {
 
     public Uri GenerateCsv() {
         String columnString = "\"Date\"" +
-                ",\"Location Traveled To\"" +
+                ",\"Ward\"" +
+                ",\"Village\"" +
+                ",\"GPS\"" +
                 ",\"Starting Mileage\"" +
                 ",\"Ending Mileage\"" +
                 ",\"Purpose of Visit\"" +
@@ -66,8 +68,10 @@ public class ExportActivity extends AppCompatActivity {
                 //    e.printStackTrace();
                 dataString.append("");
             }
-            dataString.append(",").append(ve.longitude);
-            //dataString.append(",").append(ve.latitude);
+            dataString.append(",\"").append(ve.ward).append("\"");
+            dataString.append(",\"").append(ve.village).append("\"");
+            dataString.append(",\"").append(ve.latitude).append(",").append(ve.longitude).append("\""); // GPS
+
             dataString.append(",").append(ve.startMileage);
             dataString.append(",").append(ve.endMileage);
             dataString.append(",\""); // Purpose of Visit
@@ -102,7 +106,7 @@ public class ExportActivity extends AppCompatActivity {
             if(ve.chkPassengersFrom_Other) dataString.append("Other - ").append(ve.txtPassengersFrom_Other);
 
             dataString.append("\",").append(Integer.toString(ve.noOfPassengers));
-            dataString.append(",").append(ve.generalComments);
+            dataString.append(",\"").append(ve.generalComments).append("\"");
             //beneficiaries
             dataString.append(",").append(ve.ben_men);
             dataString.append(",").append(ve.ben_women);

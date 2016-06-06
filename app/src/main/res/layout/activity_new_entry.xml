@@ -11,7 +11,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:rowCount="40"
+    android:rowCount="44"
     android:columnCount="2"
     tools:context="com.worldvision.vehicletracker.NewEntryActivity">
 
@@ -39,9 +39,57 @@
         android:datePickerMode="spinner"
         android:calendarViewShown="false"
         android:spinnersShown="true" />
+
     <TextView
         android:layout_column="0"
         android:layout_row="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ward"
+        android:layout_columnWeight="1"
+        android:id="@+id/lblWard"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_column="0"
+        android:layout_row="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/txtWard"
+        android:nextFocusForward="@+id/nbrStartMileage"
+        android:nextFocusRight="@+id/nbrStartMileage"
+        android:nextFocusDown="@+id/nbrStartMileage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Village"
+        android:id="@+id/lblVillage"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnSpan="2" />
+
+    <EditText
+        android:layout_column="0"
+        android:layout_row="5"
+        android:layout_columnSpan="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/txtVillage"
+        android:nextFocusForward="@+id/nbrStartMileage"
+        android:nextFocusRight="@+id/nbrStartMileage"
+        android:nextFocusDown="@+id/nbrStartMileage" />
+
+    <TextView
+        android:layout_column="0"
+        android:layout_row="6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -51,7 +99,7 @@
         android:layout_marginTop="20dp" />
     <EditText
         android:layout_column="0"
-        android:layout_row="3"
+        android:layout_row="7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -66,7 +114,7 @@
 
     <TextView
         android:layout_column="1"
-        android:layout_row="2"
+        android:layout_row="6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
@@ -77,7 +125,7 @@
         android:layout_marginTop="20dp" />
     <EditText
         android:layout_column="1"
-        android:layout_row="3"
+        android:layout_row="7"
         android:layout_gravity="fill_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,7 +135,7 @@
     <TextView
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="4"
+        android:layout_row="8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -97,7 +145,7 @@
         android:layout_marginTop="20dp" />
     <EditText
         android:layout_column="0"
-        android:layout_row="5"
+        android:layout_row="9"
         android:layout_gravity="fill_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -106,7 +154,7 @@
         />
     <TextView
         android:layout_column="0"
-        android:layout_row="6"
+        android:layout_row="10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -118,7 +166,7 @@
     <CheckBox
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="7"
+        android:layout_row="11"
         android:text="@string/mobile_clinic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,7 +180,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="25dp"
-        android:layout_row="9"
+        android:layout_row="13"
         android:layout_column="0"
         android:layout_columnSpan="2">
         <CheckBox
@@ -177,7 +225,7 @@
         android:layout_height="wrap_content"
         android:text="@string/sponsorship_monitoring"
         android:id="@+id/chkSponsorshipMonitoring"
-        android:layout_row="11"
+        android:layout_row="15"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -187,7 +235,7 @@
         android:layout_height="wrap_content"
         android:text="@string/adp_project_related_visit_activity"
         android:id="@+id/chkADPProjectRelated"
-        android:layout_row="12"
+        android:layout_row="16"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -200,7 +248,7 @@
         android:layout_marginLeft="25dp"
         android:visibility="gone"
         android:layout_columnSpan="2"
-        android:layout_row="13"
+        android:layout_row="17"
         android:layout_column="0">
         <CheckBox
             android:text="@string/health"
@@ -244,7 +292,7 @@
         android:layout_height="wrap_content"
         android:text="@string/stakeholder_meeting"
         android:id="@+id/chkStakeholder"
-        android:layout_row="14"
+        android:layout_row="18"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -257,7 +305,7 @@
         android:visibility="gone"
         android:id="@+id/chkStakeholderSubLayout"
         android:layout_columnSpan="2"
-        android:layout_row="15"
+        android:layout_row="19"
         android:layout_column="0">
         <CheckBox
             android:text="@string/health"
@@ -301,7 +349,7 @@
         android:layout_height="wrap_content"
         android:text="Other (Please Specify)"
         android:id="@+id/chkPurpose_Other"
-        android:layout_row="16"
+        android:layout_row="20"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -309,7 +357,7 @@
     <TextView
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="18"
+        android:layout_row="22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -322,7 +370,7 @@
         android:layout_height="wrap_content"
         android:text="@string/presentation"
         android:id="@+id/chkPresentation"
-        android:layout_row="8"
+        android:layout_row="12"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -332,7 +380,7 @@
         android:layout_height="wrap_content"
         android:text="@string/adp_everyday_business"
         android:id="@+id/chkADPEverydayBusiness"
-        android:layout_row="10"
+        android:layout_row="14"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -343,14 +391,14 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/txtPurpose_Other"
-        android:layout_row="17"
+        android:layout_row="21"
         android:layout_column="0"
         android:layout_columnSpan="2" />
 
     <CheckBox
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="19"
+        android:layout_row="23"
         android:layout_gravity="fill_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -363,7 +411,7 @@
         android:layout_height="wrap_content"
         android:text="@string/department_of_social_development"
         android:id="@+id/chkDoSD"
-        android:layout_row="20"
+        android:layout_row="24"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -373,7 +421,7 @@
         android:layout_height="wrap_content"
         android:text="@string/department_of_education"
         android:id="@+id/chkDoE"
-        android:layout_row="21"
+        android:layout_row="25"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -383,7 +431,7 @@
         android:layout_height="wrap_content"
         android:text="@string/department_of_agriculture"
         android:id="@+id/chkDoA"
-        android:layout_row="22"
+        android:layout_row="26"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -393,7 +441,7 @@
         android:layout_height="wrap_content"
         android:text="@string/community_member"
         android:id="@+id/chkCommunityMember"
-        android:layout_row="25"
+        android:layout_row="29"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -403,7 +451,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cbo_ngo"
         android:id="@+id/chkCBO"
-        android:layout_row="23"
+        android:layout_row="27"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -414,7 +462,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/txtCBONGO"
-        android:layout_row="24"
+        android:layout_row="28"
         android:layout_column="0"
         android:layout_marginLeft="25dp"
         android:hint="which cbo/ngo?"
@@ -425,7 +473,7 @@
         android:layout_height="wrap_content"
         android:text="@string/adp_staff"
         android:id="@+id/chkADPStaff"
-        android:layout_row="26"
+        android:layout_row="30"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -435,7 +483,7 @@
         android:layout_height="wrap_content"
         android:text="@string/other"
         android:id="@+id/chkPassengersFrom_Other"
-        android:layout_row="27"
+        android:layout_row="31"
         android:layout_column="0"
         android:checked="false"
         android:layout_columnSpan="2" />
@@ -448,7 +496,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/beneficiaries"
         android:id="@+id/textView2"
-        android:layout_row="29"
+        android:layout_row="33"
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:layout_gravity="center_horizontal" />
@@ -457,12 +505,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtPassengersFrom_Other"
-        android:layout_row="28"
+        android:layout_row="32"
         android:layout_column="0"
         android:layout_columnSpan="2" />
 
     <LinearLayout
-    android:layout_row="30"
+    android:layout_row="34"
     android:layout_column="0"
     android:background="#7f000000"
     android:layout_marginRight="10dp"
@@ -493,7 +541,7 @@
         android:textColor="#ffffff" />
 </LinearLayout>
     <LinearLayout
-        android:layout_row="30"
+        android:layout_row="34"
         android:layout_column="1"
         android:layout_marginLeft="10dp"
         android:background="#7f000000"
@@ -526,7 +574,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_columnSpan="2"
-        android:layout_row="32"
+        android:layout_row="36"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -635,7 +683,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_columnSpan="2"
-        android:layout_row="33"
+        android:layout_row="37"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_rowSpan="1"
@@ -743,7 +791,7 @@
         </LinearLayout>
     <LinearLayout
         android:layout_columnSpan="2"
-        android:layout_row="34"
+        android:layout_row="38"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_rowSpan="1"
@@ -849,7 +897,7 @@
     <TextView
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="35"
+        android:layout_row="39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -860,7 +908,7 @@
     <EditText
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="36"
+        android:layout_row="40"
         android:layout_gravity="fill_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -870,7 +918,7 @@
     <TextView
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="37"
+        android:layout_row="41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -880,7 +928,7 @@
     <TextView
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_row="38"
+        android:layout_row="42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -893,7 +941,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cancel"
         android:id="@+id/btnCancel"
-        android:layout_row="39"
+        android:layout_row="43"
         android:layout_marginRight="5dp"
         android:layout_gravity="fill_horizontal"
         android:layout_column="0"
@@ -905,7 +953,7 @@
         android:layout_marginLeft="5dp"
         android:layout_gravity="fill_horizontal"
         android:id="@+id/btnSave"
-        android:layout_row="39"
+        android:layout_row="43"
         android:layout_column="1"
         android:onClick="onBtnSaveClick" />
 </GridLayout>

@@ -22,6 +22,8 @@ public class VehicleEntry implements Parcelable {
     double longitude;
     String purposeOfVisit;
     String passengersFrom;
+    String ward;
+    String village;
     int ben_men;
     int ben_women;
     int ben_boys_05;
@@ -153,6 +155,8 @@ public class VehicleEntry implements Parcelable {
         dest.writeString(txtCBONGO);
         dest.writeString(txtPassengersFrom_Other);
         dest.writeString(txtPurpose_Other);
+        dest.writeString(ward);
+        dest.writeString(village);
 
 
     }
@@ -215,5 +219,7 @@ public class VehicleEntry implements Parcelable {
         txtCBONGO = in.readString();
         txtPassengersFrom_Other = in.readString();
         txtPurpose_Other = in.readString();
+        ward = in.readString();
+        village = in.readString();
     }
 }
